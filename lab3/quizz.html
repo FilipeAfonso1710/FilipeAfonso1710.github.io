@@ -4,3 +4,74 @@
         <meta charset="UTF-8">
         <title>Quizz</title>
     </head>
+    <body>
+        <header><h2>Quizz</h2></header>
+        <nav>
+            
+            <a href="index.html">Home </a>
+  
+            <a href="local.html">Localização </a>
+  
+            <a href="multimedia.html">Multimédia </a>
+  
+            <a href="info.html">Informação </a>
+  
+            <a href="quizz.html">Quizz</a>
+  
+            <a href="viagem.html">Viagem</a>
+                    
+        </nav>
+        
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <ul style="list-style-type: none;"> 
+                    <li><label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome"></li> 
+
+                    <li><label for="apelido">Apelido:</label>
+                    <input type="text" name="apelido" id="apelido"></li>
+
+                    <li><label for="email">Email:</label>
+                    <input type="text" name="email" id="email"></li>
+                </ul>
+
+                <h3>Quizzes sobre Roma:</h3>
+                    <label>
+                        <p><b>Qual é o nome do famoso anfiteatro de Roma, conhecido por suas lutas de gladiadores ?</b></p>
+                        <input type="radio" name="anfiteatros" value="Panteão">Panteão
+                        <input type="radio" name="anfiteatros" value="Fórum Romano">Fórum Romano
+                        <input type="radio" name="anfiteatros" value="Vaticano">Vaticano
+                        <input type="radio" name="anfiteatros" value="Coliseu">Coliseu
+                        <input type="radio" name="anfiteatros" value="Circo Máximo">Circo Máximo
+                    </label>
+                    
+                    <h3>Qual rio atravessa a cidade de Roma ?</h3>
+                    <select name="Rio">
+                        <option value="rioNilo">Rio Nilo</option>
+                        <option value="rioSena">Rio Sena</option>
+                        <option value="rioPo">Rio Pó</option>
+                        <option value="rioDanúbio">Rio Danúbio</option>
+                        <option value="rioTibre">Rio Tibre</option>
+                    </select>
+
+                    <h3>Em que ano que acabaram as construções da Capela Sistina ?</h3>
+                    <input type="number" id="anoFimConstruções" name="anoFimConstruções" min="1473" max="1483">
+   
+                    <h3>Marque quais das seguintes capelas estão localizadas em Roma:</h3>
+                    <input type="checkbox" id="capela1" name="capela1" value="Capela de São Pedro">
+                    <label for="capela1"> Capela de São Pedro</label>
+                    <input type="checkbox" id="capela2" name="capela2" value="Capela Paulina">
+                    <label for="capela2"> Capela Paulina</label>
+                    <input type="checkbox" id="capela3" name="capela3" value="Capela Sistina">
+                    <label for="capela3"> Capela Sistina</label>
+                    <input type="checkbox" id="capela4" name="capela4" value="Capela de Nossa Senhora das Graças">
+                    <label for="capela4"> Capela de Nossa Senhora das Graças</label>
+                    <input type="checkbox" id="capela5" name="capela5" value="Capela de São João Baptista">
+                    <label for="capela5"> Capela de São João Baptista</label>
+
+                </fieldset>
+            </form>
+    </body>
+    <footer><p>Universidade Lúsofona, 2024</p></footer> 
+</html>
