@@ -4,6 +4,12 @@
         <meta charset="UTF-8">
         <title>Viagem</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            nav a {
+                color: white;
+                margin: 10px;
+            }
+        </style>
     </head>
     <body>
         <header><h2>Viagem</h2></header>
@@ -35,18 +41,18 @@
             <input type="text" name="apelido" id="apelido" placeholder="Insira o apelido" required></li>
 
             <li><label for="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Insira o email" autocomplete="off" size="30" required></li><br>
+            <input type="text" name="email" id="email" placeholder="Insira o email" autocomplete="off" size="30" required></li>
         </u>
 
             <label for="dataPartida">Insira a data de partida que deseja:</label>
-            <input type="date" id="dataPartida" name="dataPartida" min="2024-09-30"><br><br>
+            <input type="date" id="dataPartida" name="dataPartida" min="2024-09-30">
             <label for="dataRegresso">Insira a data de partida que regressar:</label>
-            <input type="date" id="dataRegresso" name="dataRegresso" min="2024-10-01"><br><br>
+            <input type="date" id="dataRegresso" name="dataRegresso" min="2024-10-01">
 
             <label for="numeroDePessoas">Quantas pessoas vão ?</label>
-            <input type="number" id="numeroDePessoas" name="numeroDePessoas" min="1"><br><br>
+            <input type="number" id="numeroDePessoas" name="numeroDePessoas" min="1">
 
-            <a>Qual meio de transporte prefere ?</a><br>
+            <p>Qual meio de transporte prefere ?</p>
 
             <input type="radio" id="carro" name="meio_transporte" value="carro">
             <label for="carro">carro</label>
@@ -57,22 +63,22 @@
             <input type="radio" id="comboio" name="meio_transporte" value="comboio">
             <label for="comboio">comboio</label>
             <input type="radio" id="outro" name="meio_transporte" value="outro">
-            <label for="outro">outro</label><br><br>
+            <label for="outro">outro</label>
 
-            <a>Qual plano deseja esolher ?</a>
+        <p>Qual plano deseja esolher ?</p>
             <select name="Plano">
                 <option value="basic">Basic</option>
                 <option value="Premium" >Premium</option>
-            </select><br><br>
-            <a>Há algum pedido especial para a viagem ?</a><br>
-            <textarea name="pedido" rows="7" cols="40" placeholder="Descreva o seu pedido"></textarea><br><br>
+            </select>
+            <p>Há algum pedido especial para a viagem ?</p>
+            <textarea name="pedido" rows="7" cols="40" placeholder="Descreva o seu pedido"></textarea>
             
             <label for="gastosPessoas">Quanto você espera gastar por pessoa na viagem em Euros?</label>
-            <input type="number" id="gastosPessoas" name="gastosPessoas" min="10" max="1000" step="5"><br>
+            <input type="number" id="gastosPessoas" name="gastosPessoas" min="10" max="1000" step="5">
             <label for="gastosDiarios">Quanto você espera gastar diariamente em Euros?</label>
-            <input type="number" id="gastosDiarios" name="gastosDiarios" min="5" max="1000" step="5"><br><br>
+            <input type="number" id="gastosDiarios" name="gastosDiarios" min="5" max="1000" step="5">
 
-            <b>Tem tudo para a sua viagem ?</b><br><br>
+            <b>Tem tudo para a sua viagem ?</b>
             <input type="reset" value="Reset">
             <input type="submit" value="Submit">
         </fieldset>

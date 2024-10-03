@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <title>Multimédia</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <header>
-        <h2>Multimédia:</h2>
-      </header>
-      <nav>
-            
-          <a href="index.html">Home </a>
 
-          <a href="local.html">Localização </a>
+<head>
+  <meta charset="UTF-8">
+  <title>Multimédia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav a {
+      color: white;
+      margin: 10px;
+    }
 
-          <a href="multimedia.html">Multimédia </a>
+    a:hover {
+      background-color: #980000;
+      color: black;
+      padding: 5px;
+      margin: 5px;
+    }
 
-          <a href="info.html">Informação </a>
+    #Fotografias,
+    #video,
+    #poema {
+      color: #980000;
+      font-size: 24px;
+      border-bottom: 2px solid lightgray;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
 
-          <a href="quizz.html">Quizz</a>
+<body>
+  <header>
+    <h2>Multimédia:</h2>
+  </header>
+  <nav>
 
-          <a href="viagem.html">Viagem</a>
-                  
-      </nav>
-        <p>
-            <a href="#fotografias">Fotografias</a>
-            <a href="#video">Vídeo</a>
-            <a href="#poema">Poema</a>
-        </p>
-        <h3 id="Fotografias">Fotografias</h3>
+    <a href="index.html">Home </a>
 
-      <a href="images/Colisseu_grande.png" target="_blank">
-        <img src="images/colisseu_pequenpo.png" alt="imagem do Colisseu em Roma">
-      </a>
+    <a href="local.html">Localização </a>
 
-      <a href="images/forum_romano_grande.jpg" target="_blank">
-        <img src="images/forum_romano_pequeno.jpg" alt="imagem do Forum Romano">
-      </a>
+    <a href="multimedia.html">Multimédia </a>
 
-      <a href="images/geral_grande.jpg" target="_blank">
-        <img src="images/geral_pequeno.jpg" alt="Foto panorâmica de Roma com vista para basilicas e o monumento a Vítor Emanuel II da Itália ao fundo">
-      </a> 
+    <a href="info.html">Informação </a>
 
-      <h3 id="video">Vídeo:</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/oSexfR0Ubzw?si=-0dsRlVnPq9iFPfz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <h3 id="poema">Poema:</h3>
+    <a href="quizz.html">Quizz</a>
 
-      <pre>
+    <a href="viagem.html">Viagem</a>
+
+  </nav>
+  <main>
+    <p>
+      <a href="#fotografias"><b>Fotografias</b></a>
+      <a href="#video"><b>Vídeo</b></a>
+      <a href="#poema"><b>Poema</b></a>
+    </p>
+    <h3 id="Fotografias">Fotografias:</h3>
+
+    <a href="images/Colisseu_grande.png" target="_blank">
+      <img src="images/colisseu_pequenpo.png" alt="imagem do Colisseu em Roma">
+    </a>
+
+    <a href="images/forum_romano_grande.jpg" target="_blank">
+      <img src="images/forum_romano_pequeno.jpg" alt="imagem do Forum Romano">
+    </a>
+
+    <a href="images/geral_grande.jpg" target="_blank">
+      <img src="images/geral_pequeno.jpg"
+        alt="Foto panorâmica de Roma com vista para basilicas e o monumento a Vítor Emanuel II da Itália ao fundo">
+    </a>
+
+    <h3 id="video">Vídeo:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oSexfR0Ubzw?si=-0dsRlVnPq9iFPfz"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3 id="poema">Poema:</h3>
+
+    <pre>
         Roma, Eterna
 
         Nas colinas onde o tempo repousa,
@@ -78,6 +108,10 @@
                                         <i>-chatGPT</i>
 
     </pre>
-    </body>
-    <footer><p>Universidade Lúsofona, 2024</p></footer> 
-    </html>
+  </main>
+</body>
+<footer>
+  <p>Universidade Lúsofona, 2024</p>
+</footer>
+
+</html>
