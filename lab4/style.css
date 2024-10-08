@@ -37,6 +37,7 @@ body {
 main {
     padding: 5px;
 
+
     a {
         margin: 5px;
         padding: 5px;
@@ -47,6 +48,14 @@ main {
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
+}
+main#arroz {
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: red;
+
 }
 
 footer {
