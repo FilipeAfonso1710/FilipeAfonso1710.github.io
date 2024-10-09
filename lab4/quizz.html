@@ -53,57 +53,57 @@
                     </li>
                     </u>
                     <input type="submit" value="Submit">
+            </fieldset>
+            <fieldset>
+                <legend>Quizz sobre Roma:</legend>
+                <label>
+                    <p><b>Qual é o nome do famoso anfiteatro de Roma, conhecido por suas lutas de gladiadores ?</b>
+                    </p>
+                    <input type="radio" name="anfiteatros" value="Panteão" id="form1">Panteão
+                    <input type="radio" name="anfiteatros" value="Fórum Romano" id="form1">Fórum Romano
+                    <input type="radio" name="anfiteatros" value="Vaticano" id="form1">Vaticano
+                    <input type="radio" name="anfiteatros" value="Coliseu" id="form1">Coliseu
+                    <input type="radio" name="anfiteatros" value="Circo Máximo" id="form1">Circo Máximo
+                </label>
 
+                <h3>Qual rio atravessa a cidade de Roma ?</h3>
+                <select name="Rio">
+                    <option value="rioNilo" id="form1">Rio Nilo</option>
+                    <option value="rioSena" id="form1">Rio Sena</option>
+                    <option value="rioPo" id="form1">Rio Pó</option>
+                    <option value="rioDanúbio" id="form1">Rio Danúbio</option>
+                    <option value="rioTibre" id="form1">Rio Tibre</option>
+                </select>
 
-                    <h3>Quizzes sobre Roma:</h3>
-                    <label>
-                        <p><b>Qual é o nome do famoso anfiteatro de Roma, conhecido por suas lutas de gladiadores ?</b>
-                        </p>
-                        <input type="radio" name="anfiteatros" value="Panteão" id="form1">Panteão
-                        <input type="radio" name="anfiteatros" value="Fórum Romano" id="form1">Fórum Romano
-                        <input type="radio" name="anfiteatros" value="Vaticano" id="form1">Vaticano
-                        <input type="radio" name="anfiteatros" value="Coliseu" id="form1">Coliseu
-                        <input type="radio" name="anfiteatros" value="Circo Máximo" id="form1">Circo Máximo
-                    </label>
+                <h3>Em que ano que acabaram as construções da Capela Sistina ?</h3>
+                <input type="number" id="anoFimConstruções" name="anoFimConstruções" min="1473" max="1483"
+                    placeholder="ano" id="form1" step="2" required>
 
-                    <h3>Qual rio atravessa a cidade de Roma ?</h3>
-                    <select name="Rio">
-                        <option value="rioNilo" id="form1">Rio Nilo</option>
-                        <option value="rioSena" id="form1">Rio Sena</option>
-                        <option value="rioPo" id="form1">Rio Pó</option>
-                        <option value="rioDanúbio" id="form1">Rio Danúbio</option>
-                        <option value="rioTibre" id="form1">Rio Tibre</option>
-                    </select>
+                <h3>Marque quais das seguintes capelas estão localizadas em Roma:</h3>
+                <input type="checkbox" id="capela1" name="capela1" value="Capela de São Pedro" id="form1">
+                <label for="capela1"> Capela de São Pedro</label>
+                <input type="checkbox" id="capela2" name="capela2" value="Capela Paulina" id="form1">
+                <label for="capela2"> Capela Paulina</label>
+                <input type="checkbox" id="capela3" name="capela3" value="Capela Sistina" id="form1">
+                <label for="capela3"> Capela Sistina</label>
+                <input type="checkbox" id="capela4" name="capela4" value="Capela de Nossa Senhora das Graças"
+                    id="form1">
+                <label for="capela4"> Capela de Nossa Senhora das Graças</label>
+                <input type="checkbox" id="capela5" name="capela5" value="Capela de São João Baptista" id="form1">
+                <label for="capela5"> Capela de São João Baptista</label>
 
-                    <h3>Em que ano que acabaram as construções da Capela Sistina ?</h3>
-                    <input type="number" id="anoFimConstruções" name="anoFimConstruções" min="1473" max="1483"
-                        placeholder="ano" id="form1" step="2" required>
+                <h3>A bandeira de Roma possui duas cores. Identifique elas:</h3>
+                <label for="corEsquerda">Selecione a cor que fica a esquerda: </label>
+                <input type="color" id="corEsquerda" name="corEsquerda" value="#ff0000" id="form1" required>
+                <label for="corDireita">Selecione a cor que fica a direita:</label>
+                <input type="color" id="corDireita" name="corDireita" value="#ff0000" id="form1" required>
 
-                    <h3>Marque quais das seguintes capelas estão localizadas em Roma:</h3>
-                    <input type="checkbox" id="capela1" name="capela1" value="Capela de São Pedro" id="form1">
-                    <label for="capela1"> Capela de São Pedro</label>
-                    <input type="checkbox" id="capela2" name="capela2" value="Capela Paulina" id="form1">
-                    <label for="capela2"> Capela Paulina</label>
-                    <input type="checkbox" id="capela3" name="capela3" value="Capela Sistina" id="form1">
-                    <label for="capela3"> Capela Sistina</label>
-                    <input type="checkbox" id="capela4" name="capela4" value="Capela de Nossa Senhora das Graças"
-                        id="form1">
-                    <label for="capela4"> Capela de Nossa Senhora das Graças</label>
-                    <input type="checkbox" id="capela5" name="capela5" value="Capela de São João Baptista" id="form1">
-                    <label for="capela5"> Capela de São João Baptista</label>
+                <h3>Indique o quanto você gosta de Roma :D</h3>
+                <label vol>O quanto você gosta da cidade (de 0 a 100)</label>
+                <input type="range" id="vol" name="vol" min="0" max="100" id="form1" required>
 
-                    <h3>A bandeira de Roma possui duas cores. Identifique elas:</h3>
-                    <label for="corEsquerda">Selecione a cor que fica a esquerda: </label>
-                    <input type="color" id="corEsquerda" name="corEsquerda" value="#ff0000" id="form1" required>
-                    <label for="corDireita">Selecione a cor que fica a direita:</label>
-                    <input type="color" id="corDireita" name="corDireita" value="#ff0000" id="form1" required>
-
-                    <h3>Indique o quanto você gosta de Roma :D</h3>
-                    <label vol>O quanto você gosta da cidade (de 0 a 100)</label>
-                    <input type="range" id="vol" name="vol" min="0" max="100" id="form1" required>
-
-                    <input type="reset" value="reset">
-                    <input type="image" src="images/736161.png" alt="submit" width="38" height="38">
+                <input type="reset" value="reset">
+                <input type="image" src="images/736161.png" alt="submit" width="38" height="38">
 
             </fieldset>
         </form>
