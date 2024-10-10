@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Viagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Viagem</h2>
+    </header>
+    <nav>
+
+        <a href="index.html">Home </a>
+
+        <a href="local.html">Localização </a>
+
+        <a href="multimedia.html">Multimédia </a>
+
+        <a href="info.html">Informação </a>
+
+        <a href="quizz.html">Quizz</a>
+
+        <a href="viagem.html">Viagem</a>
+
+    </nav>
+    <main>
+        <h3>Agora vamos marcar a sua viagem com destino a Roma</h3>
+        <form method="get" action="https://postman-echo.com/get" id="form1">
+            <fieldset>
+                <legend>Insira os dados:</legend>
+                <ul style="list-style-type: none;">
+                    <li><label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira o nome" maxlength="20" autofocus
+                            required>
+                    </li>
+
+                    <li><label for="apelido">Apelido:</label>
+                        <input type="text" name="apelido" id="apelido" placeholder="Insira o apelido" required>
+                    </li>
+
+                    <li><label for="email">Email:</label>
+                        <input type="text" name="email" id="email" placeholder="Insira o email" autocomplete="off"
+                            size="30" required>
+                    </li>
+                    </u>
+
+                    <label for="dataPartida">Insira a data de partida que deseja:</label>
+                    <input type="date" id="dataPartida" name="dataPartida" min="2024-09-30">
+                    <label for="dataRegresso">Insira a data de partida que regressar:</label>
+                    <input type="date" id="dataRegresso" name="dataRegresso" min="2024-10-01">
+
+                    <label for="numeroDePessoas">Quantas pessoas vão ?</label>
+                    <input type="number" id="numeroDePessoas" name="numeroDePessoas" min="1">
+
+                    <p>Qual meio de transporte prefere ?</p>
+
+                    <input type="radio" id="carro" name="meio_transporte" value="carro">
+                    <label for="carro">carro</label>
+                    <input type="radio" id="avião" name="meio_transporte" value="avião">
+                    <label for="avião">avião</label>
+                    <input type="radio" id="autocarro" name="meio_transporte" value="autocarro">
+                    <label for="autocarro">autocarro</label>
+                    <input type="radio" id="comboio" name="meio_transporte" value="comboio">
+                    <label for="comboio">comboio</label>
+                    <input type="radio" id="outro" name="meio_transporte" value="outro">
+                    <label for="outro">outro</label>
+
+                    <p>Qual plano deseja esolher ?</p>
+                    <select name="Plano">
+                        <option value="basic">Basic</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                    <p>Há algum pedido especial para a viagem ?</p>
+                    <textarea name="pedido" rows="7" cols="40" placeholder="Descreva o seu pedido"></textarea>
+
+                    <label for="gastosPessoas">Quanto você espera gastar por pessoa na viagem em Euros?</label>
+                    <input type="number" id="gastosPessoas" name="gastosPessoas" min="10" max="1000" step="5">
+                    <label for="gastosDiarios">Quanto você espera gastar diariamente em Euros?</label>
+                    <input type="number" id="gastosDiarios" name="gastosDiarios" min="5" max="1000" step="5">
+
+                    <b>Tens tudo para a sua viagem ?</b>
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </main>
+</body>
+<footer>
+    <p>Universidade Lúsofona, 2024</p>
+</footer>
+
+</html>
