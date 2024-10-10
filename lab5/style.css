@@ -21,6 +21,11 @@ nav {
     color: white;
     text-align: center;
 
+    a {
+        color: white;
+        margin: 10px;
+    }
+
     a:hover {
         background-color: #980000;
         color: black;
@@ -49,12 +54,46 @@ main {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 }
+
 main#arroz {
     margin: 10px;
     text-align: left;
     background-color: white;
     border-radius: 10px;
     border-color: red;
+}
+
+section {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: red;
+    background-color: white;
+    padding-left: 10px;
+
+    ol {
+        :nth-child(2n) {
+            color: #980000;
+        }
+
+        :nth-child(2n-1) {
+            color: #006900
+        }
+    }
+
+    ul {
+        :nth-child(2n) {
+            color: #980000;
+        }
+
+        :nth-child(2n-1) {
+            color: #006900
+        }
+    }
+    tr:nth-child(1){
+        background-color: #980000;
+        color: white;
+        }
 }
 
 footer {
@@ -75,4 +114,7 @@ input {
 input {
     display: block;
     margin-bottom: 10px;
+}
+th{
+    padding: 5px;
 }
