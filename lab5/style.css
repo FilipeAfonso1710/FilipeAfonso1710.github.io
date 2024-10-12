@@ -58,7 +58,7 @@ main {
 main#arroz {
     margin: 10px;
     text-align: left;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 10px;
     border-color: red;
 }
@@ -79,9 +79,11 @@ section {
         :nth-child(2n-1) {
             color: #006900
         }
+        
     }
 
     ul {
+
         :nth-child(2n) {
             color: #980000;
         }
@@ -90,10 +92,18 @@ section {
             color: #006900;
         }
     }
-    tr:nth-child(1){
+
+    tr:nth-child(1) {
         background-color: #006900;
         color: white;
-        }
+    }
+
+    a{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+        padding: 1px;
+        color:#006900;
+    }
 }
 
 footer {
@@ -115,6 +125,7 @@ input {
     display: block;
     margin-bottom: 10px;
 }
-th{
+
+th {
     padding: 5px;
 }

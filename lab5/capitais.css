@@ -1,0 +1,29 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; /* medidas sao tomadas da borda */
+}
+header{
+    position:sticky
+}
+nav {
+    margin: 10px;
+    padding: 10px;
+    border: 20px whitesmoke;
+    border-radius: 2px;
+    background-color: #006900;
+    color: white;
+    text-align: center;
+
+    a {
+        color: white;
+        margin: 10px;
+    }
+
+    a:hover {
+        background-color: #980000;
+        color: black;
+        padding: 5px;
+        margin: 5px;
+    }
+}
