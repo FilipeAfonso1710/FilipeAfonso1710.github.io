@@ -62,19 +62,16 @@ article#poema {
 }
 
 article#paisagens {
-
-        .atras :first-child {
-        position: relative;
+    div :first-child {
         width: 100vw;
+        position: relative;
     }
 
-    .frente {
-        color:black;
+    div :last-child {
+        color: white;
         position: absolute;
-        padding: 10px;
-        background-color: whitesmoke;
-        text-decoration: none;
-       right: 0px;
-       bottom: 0px; 
+        bottom: 0px;
+        right: 0px;
     }
+
 }
