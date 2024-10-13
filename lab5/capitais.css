@@ -7,6 +7,7 @@
 }
 
 header {
+    width: 100vw;
     background-color: #006900;
     color: whitesmoke;
     align-items: center;
@@ -37,25 +38,43 @@ nav a:last-child {
     background-color: #980000;
     color: black;
 }
+
 article#poema {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
     width: 100vw;
     font-size: 1rem;
     background-color: #8fd894;
-    pre{
+
+    pre {
         font-size: small;
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
-        a{
+
+        a {
             color: black;
             text-decoration: none;
             font-weight: 600;
         }
     }
 }
-article#paisagens{
-    background-color: #006900;
+
+article#paisagens {
+
+        .atras :first-child {
+        position: relative;
+        width: 100vw;
+    }
+
+    .frente {
+        color:black;
+        position: absolute;
+        padding: 10px;
+        background-color: whitesmoke;
+        text-decoration: none;
+       right: 0px;
+       bottom: 0px; 
+    }
 }
