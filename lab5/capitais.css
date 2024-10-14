@@ -13,10 +13,27 @@ header {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    position: sticky
+    position: sticky;
+
+    a:link {
+        color: black
+    }
+
+    a:visited {
+        color: darkblue;
+    }
+
+    a:hover {
+        color: whitesmoke;
+    }
+
+    a:active {
+        color: #ea9898
+    }
 }
 
 header div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.5em;
     padding: 1em;
 }
@@ -36,8 +53,8 @@ nav a:last-child {
     margin-right: 5px;
     border-radius: 5px;
     background-color: #980000;
-    color: black;
 }
+
 
 article#poema {
     display: flex;
@@ -84,27 +101,26 @@ article#paisagens {
         }
     }
 }
-article#cidades{
+
+article#cidades {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: whitesmoke;
 
-    section{
+    section {
 
         display: flex;
-        align-items:center;
+        align-items: center;
         width: auto;
         height: auto;
-        margin: 5px;
-
+        margin: 20px;
         border-radius: 5%;
-      
-        
-        p{
+
+
+        p {
             display: flex;
             align-items: center;
-            text-align: center;
             justify-content: center;
             height: 100%;
             width: 100px;
@@ -113,11 +129,89 @@ article#cidades{
             border-top-right-radius: 5%;
             border-bottom-right-radius: 5%;
         }
+
         img {
             border-top-left-radius: 5%;
             border-bottom-left-radius: 5%;
             width: 100px
-            
+        }
+
+        p:hover {
+            background-color: #ea9898;
+
+        }
+    }
+}
+
+article#experimento {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ea9898;
+
+    section#circulo {
+
+
+        div#grande {
+            margin: 10%;
+            height: 24vh;
+            width: 20vw;
+            background-color: #006900;
+            border-radius: 100px;
+            text-align: center;
+
+            i {
+                top: 50px;
+            }
+        }
+
+        div#pequeno {
+            margin: 5%;
+            height: 12vh;
+            width: 10vw;
+            background-color: #980000;
+            border-radius: 100px;
+        }
+    }
+
+    section#bandeira {
+        display: flex;
+
+        div#pai {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 200px;
+            margin: 10%;
+            background-color:bisque;
+
+        }
+
+        div {
+            height: 75px;
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div:first-child {
+            background-color: #006900;
+        }
+
+        div:nth-child(2) {
+            background-color: #8fd894;
+        }
+
+        div:nth-child(3) {
+            background-color: whitesmoke;
+        }
+
+        div:nth-child(4) {
+            background-color: #ea9898;
+        }
+
+        div:last-child {
+            background-color: #980000;
         }
     }
 }
