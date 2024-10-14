@@ -62,16 +62,62 @@ article#poema {
 }
 
 article#paisagens {
-    div :first-child {
-        width: 100vw;
+
+    .atras {
         position: relative;
+
     }
 
-    div :last-child {
-        color: white;
+    .frente {
         position: absolute;
-        bottom: 0px;
+        bottom: 5px;
         right: 0px;
-    }
+        font-size: large;
 
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: whitesmoke;
+        }
+    }
+}
+article#cidades{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+
+    section{
+
+        display: flex;
+        align-items:center;
+        width: auto;
+        height: auto;
+        margin: 5px;
+
+        border-radius: 5%;
+      
+        
+        p{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100%;
+            width: 100px;
+            background-color: #980000;
+            color: whitesmoke;
+            border-top-right-radius: 5%;
+            border-bottom-right-radius: 5%;
+        }
+        img {
+            border-top-left-radius: 5%;
+            border-bottom-left-radius: 5%;
+            width: 100px
+            
+        }
+    }
 }
