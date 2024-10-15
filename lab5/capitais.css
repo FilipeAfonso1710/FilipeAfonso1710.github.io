@@ -215,3 +215,10 @@ article#experimento {
         }
     }
 }
+footer {
+    height: auto;
+    padding: 10px;
+    background-color: #980000;
+    color: whitesmoke
+    
+}
