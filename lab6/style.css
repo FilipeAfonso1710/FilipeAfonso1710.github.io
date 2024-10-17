@@ -1,0 +1,143 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+@media screen and (max-width: 600px){
+    body {background-color: blue;}
+}
+
+header {
+    margin: 0px;
+    padding: 10px;
+    border: 0px #006900;
+    border-radius: 0px;
+    background-color: #006900;
+    color: white;
+    text-align: center;
+}
+
+nav { 
+    margin: 10px;
+    padding: 15px;
+    border: 20px whitesmoke;
+    border-radius: 2px;
+    background-color: #006900;
+    color: white;
+    text-align: center;
+    a {
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: #980000;
+        border-radius: 10px;
+        color: black;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+}
+
+main {
+    padding: 5px;
+
+
+    a {
+        margin: 5px;
+        padding: 5px;
+        border: 10px whitesmoke;
+        border-radius: 2px;
+        background-color: whitesmoke;
+        color: #980000;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+    }
+}
+
+main#arroz {
+    margin: 10px;
+    text-align: left;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-color: red;
+}
+
+section {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: red;
+    background-color: white;
+    padding-left: 10px;
+
+    ol {
+        :nth-child(2n) {
+            color: #980000;
+        }
+
+        :nth-child(2n-1) {
+            color: #006900
+        }
+        
+    }
+
+    ul {
+
+        :nth-child(2n) {
+            color: #980000;
+        }
+
+        :nth-child(2n-1) {
+            color: #006900;
+        }
+    }
+
+    tr:nth-child(1) {
+        background-color: #006900;
+        color: white;
+    }
+
+    a{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+        padding: 1px;
+        color:#006900;
+    }
+}
+
+footer {
+    padding: 10px;
+    background-color: #980000;
+    color: whitesmoke
+}
+
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+th {
+    padding: 5px;
+}
+section#Fotografias{
+    a:hover{
+        cursor: zoom-in;
+    }
+}

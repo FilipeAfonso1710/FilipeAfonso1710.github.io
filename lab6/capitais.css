@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* medidas sao tomadas da borda */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+    width: 100vw;
+    background-color: #006900;
+    color: whitesmoke;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+
+    a:link {
+        color: black
+    }
+
+    a:visited {
+        color: darkblue;
+    }
+
+    a:hover {
+        color: whitesmoke;
+    }
+
+    a:active {
+        color: #ea9898
+    }
+}
+
+header div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: end;
+}
+
+nav a {
+    font-size: 1em;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a:last-child {
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #980000;
+}
+
+
+article#poema {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    font-size: 1rem;
+    background-color: #8fd894;
+
+    pre {
+        font-size: small;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+
+article#paisagens {
+
+    .atras {
+        position: relative;
+
+    }
+
+    .frente {
+        position: absolute;
+        bottom: 5px;
+        right: 0px;
+        font-size: large;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: whitesmoke;
+        }
+    }
+}
+
+article#cidades {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+   
+    
+
+    section {
+
+        
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        
+        
+    
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            background-color: #980000;
+            color: whitesmoke;
+            border-top-right-radius: 20%;
+            border-bottom-right-radius: 20%;
+        }
+
+        img {
+            border-top-left-radius: 20%;
+            border-bottom-left-radius: 20%;
+            width: 100px
+        }
+
+        p:hover {
+            background-color: #ea9898;
+
+        }
+    }
+}
+
+article#experimento {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ea9898;
+
+    section#circulo {
+
+
+        div#grande {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10%;
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+            background-color: white;
+        
+        }
+
+        div#pequeno {
+            margin: 5%;
+            height: 75px;
+            width: 75px;
+            background-color: #980000;
+            border-radius: 100px;
+        }
+    }
+
+    section#bandeira {
+        display: flex;
+
+        div#pai {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 200px;
+            background-color: bisque;
+        }
+
+        div {
+            height: 75px;
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        div:first-child {
+            background-color: #006900;
+        }
+
+        div:nth-child(2) {
+            background-color: #8fd894;
+        }
+
+        div:nth-child(3) {
+            background-color: whitesmoke;
+        }
+
+        div:nth-child(4) {
+            background-color: #ea9898;
+        }
+
+        div:last-child {
+            background-color: #980000;
+        }
+    }
+}
+footer {
+    bottom: 0px;
+    height: auto;
+    width: 100vw;
+    padding: 10px;
+    background-color: #980000;
+    color: whitesmoke
+    
+}
