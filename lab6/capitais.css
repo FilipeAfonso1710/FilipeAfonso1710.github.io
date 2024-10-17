@@ -110,6 +110,7 @@ article#cidades {
     margin-bottom: 30px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 100vw;
 
    
     

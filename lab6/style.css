@@ -114,9 +114,11 @@ section {
 }
 
 footer {
+    bottom: 0px;
     padding: 10px;
     background-color: #980000;
     color: whitesmoke
+
 }
 
 
