@@ -2,14 +2,19 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-@media screen and (max-width: 600px){
-    body {background-color: blue;}
-    iframe{ width: ;
+@media screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
+
+    iframe {
+       width: 365px !important; height:360px !important; 
     }
 }
 
 
 header {
+    grid-area: header-area;
     margin: 0px;
     padding: 10px;
     border: 0px #006900;
@@ -19,7 +24,8 @@ header {
     text-align: center;
 }
 
-nav { 
+nav {
+    grid-area: menu-area;
     margin: 10px;
     padding: 15px;
     border: 20px whitesmoke;
@@ -27,6 +33,7 @@ nav {
     background-color: #006900;
     color: white;
     text-align: center;
+
     a {
         color: white;
         margin: 10px;
@@ -49,6 +56,7 @@ body {
 }
 
 main {
+    grid-area: main-area;
     padding: 5px;
 
 
@@ -89,7 +97,7 @@ section {
         :nth-child(2n-1) {
             color: #006900
         }
-        
+
     }
 
     ul {
@@ -108,20 +116,20 @@ section {
         color: white;
     }
 
-    a{
+    a {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: white;
         padding: 1px;
-        color:#006900;
+        color: #006900;
     }
 }
 
 footer {
+    grid-area: footer-area;
     bottom: 0px;
     padding: 10px;
     background-color: #980000;
     color: whitesmoke
-
 }
 
 
@@ -141,11 +149,24 @@ input {
 th {
     padding: 5px;
 }
-section#Fotografias{
-    a:hover{
+
+section#Fotografias {
+    a:hover {
         cursor: zoom-in;
     }
 }
-#poema{
-    text-align: center;
+
+#poema {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#video{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+aside {
+    grid-area: aside-area;
 }

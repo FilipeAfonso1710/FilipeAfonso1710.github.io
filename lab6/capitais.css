@@ -107,7 +107,6 @@ article#paisagens {
 
 article#cidades {
     width: 100vw;
-    height: 100vw;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
