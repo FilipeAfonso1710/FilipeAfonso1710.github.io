@@ -103,51 +103,42 @@ article#paisagens {
 }
 
 article#cidades {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100vw;
+    background-color: whitesmoke;
 
-   
-    
+    section{
 
-    section {
-
-        
         display: flex;
-        align-items: center;
+        align-items:center;
         width: auto;
         height: auto;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 5%;
+      
         
-        
-    
-
-        p {
+        p{
             display: flex;
             align-items: center;
+            text-align: center;
             justify-content: center;
             height: 100%;
-            width: 100%;
-            padding: 10px;
+            width: 100px;
             background-color: #980000;
             color: whitesmoke;
-            border-top-right-radius: 20%;
-            border-bottom-right-radius: 20%;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
         }
-
         img {
-            border-top-left-radius: 20%;
-            border-bottom-left-radius: 20%;
+            border-top-left-radius: 10%;
+            border-bottom-left-radius: 10%;
             width: 100px
+            
         }
-
-        p:hover {
-            background-color: #ea9898;
-
+        p:hover{
+            background-color: #006900;
         }
     }
 }
