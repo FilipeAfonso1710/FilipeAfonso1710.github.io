@@ -5,7 +5,9 @@
     /* medidas sao tomadas da borda */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
+body {
+    background-color: black;
+}
 header {
     width: 100vw;
     background-color: #006900;
@@ -104,6 +106,8 @@ article#paisagens {
 }
 
 article#cidades {
+    width: 100vw;
+    height: 100vw;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
