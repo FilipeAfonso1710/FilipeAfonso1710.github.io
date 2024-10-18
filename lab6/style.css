@@ -2,13 +2,30 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     body {
         background-color: blue;
     }
 
     iframe {
-       width: 365px !important; height:360px !important; 
+        width: 85vw !important;
+        height: 360px !important;
+        text-align: center;
+        align-self: center;
+    }
+
+    img {
+        width: 85vw !important;
+    }
+
+    section {
+        
+    }
+
+    #fotografias {
+        a {
+            height: 10% !important;
+        }
     }
 }
 
@@ -58,7 +75,8 @@ body {
 main {
     grid-area: main-area;
     padding: 5px;
-
+    text-align: center;
+    margin: 10px black;
 
     a {
         margin: 5px;
@@ -74,11 +92,12 @@ main {
 }
 
 main#arroz {
-    margin: 10px;
     text-align: left;
-    background-color: whitesmoke;
-    border-radius: 10px;
     border-color: red;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding-left: 10px;
 }
 
 section {
@@ -151,8 +170,23 @@ th {
 }
 
 section#Fotografias {
+    h3 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 10px;
+    }
+
     a:hover {
         cursor: zoom-in;
+        margin: 0px;
+
     }
 }
 
@@ -160,13 +194,27 @@ section#Fotografias {
     display: flex;
     justify-content: center;
     align-content: center;
+
 }
-#video{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
+#video {
+    text-align: center;
 }
 
 aside {
     grid-area: aside-area;
+    background-color: white;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+
+    .material-icons {
+        font-size: 50px;
+        color: #006900
+    }
+
+    div {
+        display: flex;
+        gap: 20px;
+    }
 }
