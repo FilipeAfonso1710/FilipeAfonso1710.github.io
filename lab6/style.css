@@ -8,8 +8,8 @@
     }
 
     iframe {
-        width: 85vw !important;
-        height: 360px !important;
+        width: 100% !important;
+      
         text-align: center;
         align-self: center;
     }
@@ -18,14 +18,20 @@
         width: 85vw !important;
     }
 
-    section {
-        
+    #foto{
+        img {
+            width: 25vw !important;
+        }
     }
 
-    #fotografias {
-        a {
-            height: 10% !important;
-        }
+
+    pre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 13px !important;
+        overflow-x:visible;
     }
 }
 
@@ -81,9 +87,9 @@ main {
     a {
         margin: 5px;
         padding: 5px;
-        border: 10px whitesmoke;
+        border: 10px;
         border-radius: 2px;
-        background-color: whitesmoke;
+        background-color: white;
         color: #980000;
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -98,6 +104,11 @@ main#arroz {
     border-radius: 10px;
     margin: 10px;
     padding-left: 10px;
+
+    section {
+        margin: 20px;
+        background-color: white;
+    }
 }
 
 section {
@@ -106,7 +117,8 @@ section {
     border-radius: 10px;
     border-color: red;
     background-color: white;
-    padding-left: 10px;
+    text-align: start;
+
 
     ol {
         :nth-child(2n) {
@@ -142,6 +154,11 @@ section {
         color: #006900;
     }
 }
+
+pre {
+    text-align: center;
+}
+
 
 footer {
     grid-area: footer-area;
