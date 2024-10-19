@@ -15,16 +15,8 @@
     }
 
     img {
-        width: 85vw !important;
+        width: 100% !important;
     }
-
-    #foto{
-        img {
-            width: 25vw !important;
-        }
-    }
-
-
     pre {
         display: flex;
         flex-direction: column;
