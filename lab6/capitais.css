@@ -113,7 +113,6 @@ article#cidades {
     background-color: whitesmoke;
 
     section{
-
         display: flex;
         align-items:center;
         width: auto;
@@ -121,7 +120,7 @@ article#cidades {
         margin: 5px;
         padding: 10px;
         border-radius: 5%;
-        
+
         p{
             display: flex;
             align-items: center;
@@ -133,6 +132,7 @@ article#cidades {
             color: whitesmoke;
             border-top-right-radius: 10%;
             border-bottom-right-radius: 10%;
+    
         }
         img {
             border-top-left-radius: 10%;
@@ -179,18 +179,11 @@ article#experimento {
 
     section#bandeira {
         display: flex;
-
-        div#pai {
-            display: flex;
-            align-items: center;
-            height: 100px;
-            width: 200px;
-            background-color: bisque;
-        }
-
+        border: 1px solid black;
+        width: 25vw;
         div {
             height: 75px;
-            width: 50px;
+            width: 40vw;
             padding: 10px;
             text-align: center;
         }

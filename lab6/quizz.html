@@ -14,7 +14,7 @@
     }
 </style>
 
-<body>
+<body id="quizz">
     <header>
         <h2>Quizz</h2>
     </header>
@@ -41,34 +41,44 @@
 
         <form method="get" action="https://postman-echo.com/get" id="form1">
             <fieldset>
+
                 <legend>Dados Pessoais:</legend>
+
                 <ul style="list-style-type: none;">
-                    <li><label for="nome">Nome:</label>
-                        <input type="text" name="nome" id="nome" placeholder="Insira o nome" maxlength="20" autofocus
-                            required>
-                    </li>
+                    <div class="radio">
+                        <li><label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome" placeholder="Insira o nome" maxlength="20"
+                                autofocus required>
+                        </li>
 
-                    <li><label for="apelido">Apelido:</label>
-                        <input type="text" name="apelido" id="apelido" placeholder="Insira o apelido" required>
-                    </li>
+                        <li><label for="apelido">Apelido:</label>
+                            <input type="text" name="apelido" id="apelido" placeholder="Insira o apelido" required>
+                        </li>
 
-                    <li><label for="email">Email:</label>
-                        <input type="text" name="email" id="email" placeholder="Insira o email" autocomplete="off"
-                            size="30" required>
-                    </li>
-                    </u>
+                        <li><label for="email">Email:</label>
+                            <input type="text" name="email" id="email" placeholder="Insira o email" autocomplete="off"
+                                size="30" required>
+                        </li>
+                    </div>
+                    </ul>
+
+                    <div class="reset">
                     <input type="submit" value="Submit">
+                    </div>
+
             </fieldset>
             <fieldset>
                 <legend>Quizz sobre Roma:</legend>
                 <label>
                     <p><b>Qual é o nome do famoso anfiteatro de Roma, conhecido por suas lutas de gladiadores ?</b>
                     </p>
-                    <input type="radio" name="anfiteatros" value="Panteão" id="form1">Panteão
-                    <input type="radio" name="anfiteatros" value="Fórum Romano" id="form1">Fórum Romano
-                    <input type="radio" name="anfiteatros" value="Vaticano" id="form1">Vaticano
-                    <input type="radio" name="anfiteatros" value="Coliseu" id="form1">Coliseu
-                    <input type="radio" name="anfiteatros" value="Circo Máximo" id="form1">Circo Máximo
+                    <div class="radio">
+                        <input type="radio" name="anfiteatros" value="Panteão" id="form1">Panteão
+                        <input type="radio" name="anfiteatros" value="Fórum Romano" id="form1">Fórum Romano
+                        <input type="radio" name="anfiteatros" value="Vaticano" id="form1">Vaticano
+                        <input type="radio" name="anfiteatros" value="Coliseu" id="form1">Coliseu
+                        <input type="radio" name="anfiteatros" value="Circo Máximo" id="form1">Circo Máximo
+                    </div>
                 </label>
 
                 <h3>Qual rio atravessa a cidade de Roma ?</h3>
@@ -85,30 +95,37 @@
                     placeholder="ano" id="form1" step="2" required>
 
                 <h3>Marque quais das seguintes capelas estão localizadas em Roma:</h3>
-                <input type="checkbox" id="capela1" name="capela1" value="Capela de São Pedro" id="form1">
-                <label for="capela1"> Capela de São Pedro</label>
-                <input type="checkbox" id="capela2" name="capela2" value="Capela Paulina" id="form1">
-                <label for="capela2"> Capela Paulina</label>
-                <input type="checkbox" id="capela3" name="capela3" value="Capela Sistina" id="form1">
-                <label for="capela3"> Capela Sistina</label>
-                <input type="checkbox" id="capela4" name="capela4" value="Capela de Nossa Senhora das Graças"
-                    id="form1">
-                <label for="capela4"> Capela de Nossa Senhora das Graças</label>
-                <input type="checkbox" id="capela5" name="capela5" value="Capela de São João Baptista" id="form1">
-                <label for="capela5"> Capela de São João Baptista</label>
+                <div class="radio">
+                    <input type="checkbox" id="capela1" name="capela1" value="Capela de São Pedro" id="form1">
+                    <label for="capela1"> Capela de São Pedro</label>
+                    <input type="checkbox" id="capela2" name="capela2" value="Capela Paulina" id="form1">
+                    <label for="capela2"> Capela Paulina</label>
+                    <input type="checkbox" id="capela3" name="capela3" value="Capela Sistina" id="form1">
+                    <label for="capela3"> Capela Sistina</label>
+                    <input type="checkbox" id="capela4" name="capela4" value="Capela de Nossa Senhora das Graças"
+                        id="form1">
+                    <label for="capela4"> Capela de Nossa Senhora das Graças</label>
+                    <input type="checkbox" id="capela5" name="capela5" value="Capela de São João Baptista" id="form1">
+                    <label for="capela5"> Capela de São João Baptista</label>
+                </div>
 
                 <h3>A bandeira de Roma possui duas cores. Identifique elas:</h3>
-                <label for="corEsquerda">Selecione a cor que fica a esquerda: </label>
-                <input type="color" id="corEsquerda" name="corEsquerda" value="#ff0000" id="form1" required>
-                <label for="corDireita">Selecione a cor que fica a direita:</label>
-                <input type="color" id="corDireita" name="corDireita" value="#ff0000" id="form1" required>
+                <div class="radio">
+                    <label for="corEsquerda">Selecione a cor que fica a esquerda: </label>
+                    <input type="color" id="corEsquerda" name="corEsquerda" value="#ff0000" id="form1" required>
+
+                    <label for="corDireita">Selecione a cor que fica a direita:</label>
+                    <input type="color" id="corDireita" name="corDireita" value="#ff0000" id="form1" required>
+                </div>
 
                 <h3>Indique o quanto você gosta de Roma :D</h3>
                 <label vol>O quanto você gosta da cidade (de 0 a 100)</label>
                 <input type="range" id="vol" name="vol" min="0" max="100" id="form1" required>
 
-                <input type="reset" value="reset">
-                <input type="image" src="images/736161.png" alt="submit" width="38" height="38">
+                <div class="reset">
+                    <input type="reset" value="reset">
+                    <input type="image" src="images/736161.png" alt="submit" width="38" height="38">
+                </div>
 
             </fieldset>
         </form>

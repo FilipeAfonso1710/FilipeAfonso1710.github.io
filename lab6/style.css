@@ -2,14 +2,133 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+/* estelização de layout*/
+/* layout computador */
+body {
+    display: grid;
+
+    grid-template-areas:
+        'header header header'
+        'menu menu menu'
+        'main main aside'
+        'footer footer footer';
+    grid-template-rows: 15vh 10vh 1fr 15vh;
+    grid-template-columns: 2fr 1fr 10vw;
+    background-color: whitesmoke;
+    margin: 0px;
+}
+
+/* para a página localização (footer) */
+body.localizacao {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'menu menu menu'
+        'main main aside'
+        'footer footer footer';
+    grid-template-rows: 15vh 10vh 1fr 15vh;
+    grid-template-columns: 1fr 1fr 10vw;
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+/*Body para a página quizz e viagem*/
+body#quizz {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'menu menu menu'
+        'main main main'
+        'footer footer footer';
+    grid-template-rows: 15vh 10vh 1fr 15vh;
+    grid-template-columns: 1fr 1fr 10vw;
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+/*Para telemóvel*/
+
 @media screen and (max-width: 700px) {
+
+    /*Layout páginas padrão*/
     body {
-        background-color: blue;
+        display: grid;
+
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'aside aside aside'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 5fr 18vh 15vh;
+        grid-template-columns: 1fr 1fr 10vw;
+        background-color: whitesmoke;
+        margin: 0px;
+    }
+
+    /*Layout página local*/
+    body.localizacao {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'aside aside aside'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 5fr 18vh 15vh;
+        grid-template-columns: 1fr 1fr 10vw;
+        background-color: whitesmoke;
+        height: 100vh;
+    }
+
+    /*Layout quizz e viagem*/
+
+    body#quizz {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 1fr 15vh;
+
+        div.radio {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: start !important;
+        }
+    }
+
+    /*Layout recomendação*/
+
+    div.tabelas {
+        display: flex;
+        flex-direction: column;
+    
+        section {
+            width: 92vw !important;
+        }
+    
+        table {
+            height: 50vh;
+            width: 100%;
+        }
+    }
+
+    aside {
+        div {
+            display: flex !important;
+            flex-direction: row !important;
+        }
+
+        .material-icons {
+            font-size: 50px !important;
+        }
     }
 
     iframe {
         width: 100% !important;
-      
+
         text-align: center;
         align-self: center;
     }
@@ -17,19 +136,20 @@
     img {
         width: 100% !important;
     }
+
     pre {
         display: flex;
         flex-direction: column;
         justify-content: center !important;
         align-items: center !important;
         font-size: 13px !important;
-        overflow-x:visible;
+        overflow-x: visible;
     }
 }
 
 
 header {
-    grid-area: header-area;
+    grid-area: header;
     margin: 0px;
     padding: 10px;
     border: 0px #006900;
@@ -40,38 +160,34 @@ header {
 }
 
 nav {
-    grid-area: menu-area;
+    grid-area: menu;
     margin: 10px;
-    padding: 15px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     border: 20px whitesmoke;
     border-radius: 2px;
     background-color: #006900;
     color: white;
-    text-align: center;
+
 
     a {
-        color: white;
-        margin: 10px;
+        font-size: 80%;
+        margin: 2vw;
         text-decoration: none;
+        color: white;
     }
 
     a:hover {
-        background-color: #980000;
-        border-radius: 10px;
+        
         color: black;
-        padding: 5px;
-        margin: 5px;
-        text-align: center;
+
     }
 }
 
-body {
-    margin: 0px;
-    background-color: whitesmoke;
-}
-
 main {
-    grid-area: main-area;
+    grid-area: main;
     padding: 5px;
     text-align: center;
     margin: 10px black;
@@ -153,13 +269,42 @@ pre {
 
 
 footer {
-    grid-area: footer-area;
+    grid-area: footer;
     bottom: 0px;
     padding: 10px;
     background-color: #980000;
     color: whitesmoke
 }
 
+/*Quizz perguntas radio alinhar*/
+div.radio {
+    display: flex;
+    justify-items: start;
+    gap: 10px;
+}
+
+/*Div para colocar as tabelas 2x2*/
+div.tabelas {
+    display: flex;
+    justify-content: space-evenly;
+    gap: auto;
+
+    section {
+        width: 100vw;
+    }
+
+    table {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+/*Botão send e rest*/
+div.reset {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
 
 label {
     font-size: small;
@@ -211,19 +356,25 @@ section#Fotografias {
 }
 
 aside {
-    grid-area: aside-area;
-    background-color: white;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 10px;
     padding-left: 10px;
     border-radius: 20px;
+    background-color: white;
 
     .material-icons {
-        font-size: 50px;
+        font-size: 4vw;
         color: #006900
     }
 
     div {
         display: flex;
-        gap: 20px;
+        flex-direction: column;
+        top: 20px;
+        gap: 5vh;
     }
 }
