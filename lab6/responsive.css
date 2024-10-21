@@ -1,0 +1,104 @@
+@media screen and (max-width: 700px) {
+
+    /*Layout páginas padrão*/
+    body {
+        display: grid;
+
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'aside aside aside'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 5fr 18vh 15vh;
+        grid-template-columns: 1fr 1fr 10vw;
+        background-color: whitesmoke;
+        margin: 0px;
+    }
+
+    /*Layout página local*/
+    body.localizacao {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'aside aside aside'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 5fr 18vh 15vh;
+        grid-template-columns: 1fr 1fr 10vw;
+        background-color: whitesmoke;
+        height: 100vh;
+    }
+
+    /*Layout quizz e viagem*/
+
+    body#quizz {
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'menu menu menu'
+            'main main main'
+            'footer footer footer';
+        grid-template-rows: 15vh 20vh 1fr 15vh;
+
+        div.radio {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: start !important;
+        }
+    }
+
+    /*Layout recomendação*/
+
+    div.tabelas {
+        display: flex;
+        flex-direction: column;
+
+        section {
+            width: 92vw !important;
+        }
+
+        table {
+            height: 50vh;
+            width: 100%;
+        }
+    }
+
+    aside {
+        div {
+            display: flex !important;
+            flex-direction: row !important;
+        }
+
+        .material-icons {
+            font-size: 50px !important;
+        }
+    }
+
+    iframe {
+        width: 100% !important;
+
+        text-align: center;
+        align-self: center;
+    }
+
+    img {
+        width: 100% !important;
+    }
+
+    pre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 13px !important;
+        overflow-x: visible;
+    }
+
+    table {
+        display: inline-flexbox;
+        justify-content: center;
+        font-size: 50% !important;
+    }
+}

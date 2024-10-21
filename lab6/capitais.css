@@ -5,11 +5,24 @@
     /* medidas sao tomadas da borda */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+@media screen and (max-width: 700px) {
+    body{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+}
+
 body {
     background-color: black;
+    width: 100%;
 }
+
 header {
-    width: 100vw;
+    height: 15vh;
+    width: 100%;
     background-color: #006900;
     color: whitesmoke;
     align-items: center;
@@ -60,11 +73,12 @@ nav a:last-child {
 
 
 article#poema {
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     font-size: 1rem;
     background-color: #8fd894;
 
@@ -106,22 +120,22 @@ article#paisagens {
 }
 
 article#cidades {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: whitesmoke;
 
-    section{
+    section {
         display: flex;
-        align-items:center;
+        align-items: center;
         width: auto;
         height: auto;
         margin: 5px;
         padding: 10px;
         border-radius: 5%;
 
-        p{
+        p {
             display: flex;
             align-items: center;
             text-align: center;
@@ -132,22 +146,23 @@ article#cidades {
             color: whitesmoke;
             border-top-right-radius: 10%;
             border-bottom-right-radius: 10%;
-    
+
         }
+
         img {
             border-top-left-radius: 10%;
             border-bottom-left-radius: 10%;
             width: 100px
-            
         }
-        p:hover{
+
+        p:hover {
             background-color: #006900;
         }
     }
 }
 
 article#experimento {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -165,7 +180,7 @@ article#experimento {
             width: 200px;
             border-radius: 100px;
             background-color: white;
-        
+
         }
 
         div#pequeno {
@@ -181,6 +196,7 @@ article#experimento {
         display: flex;
         border: 1px solid black;
         width: 25vw;
+
         div {
             height: 75px;
             width: 40vw;
@@ -209,12 +225,29 @@ article#experimento {
         }
     }
 }
+article#paralax{
+    display: flex;
+    justify-content: center;
+    pre{
+        
+        color: white;
+        padding: 20px;
+        white-space: pre-wrap;
+        font-weight: bold;
+    }
+    background-image:url(https://dicasdaitalia.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=904&height=508&format=.png&quality=91&imagick=uploads.dicasdaitalia.com.br/sites/11/2024/08/paisagem-entardecer-roma-primavera.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+}
+
 footer {
     bottom: 0px;
     height: auto;
-    width: 100vw;
+    width: 100%;
     padding: 10px;
     background-color: #980000;
     color: whitesmoke
-    
 }
