@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    body{
+    body {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
@@ -226,16 +226,19 @@ article#experimento {
         }
     }
 }
-article#paralax{
+
+article#paralax {
     display: flex;
     justify-content: center;
-    pre{
-        
+
+    pre {
+
         color: white;
         padding: 20px;
         white-space: pre-wrap;
         font-weight: bold;
     }
+
     background-image:url(https://dicasdaitalia.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=904&height=508&format=.png&quality=91&imagick=uploads.dicasdaitalia.com.br/sites/11/2024/08/paisagem-entardecer-roma-primavera.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -251,4 +254,55 @@ footer {
     padding: 10px;
     background-color: #980000;
     color: whitesmoke
+}
+
+article#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    p{
+        position: absolute;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: oblique;
+        z-index: 2;
+        color: white;
+}
+
+}
+#myvideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    animation-iteration-count: infinite;
+}
+
+article#fotos{
+    display: flex;
+    position: relative;
+
+    div{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        img{
+            width: 100%;
+            position: relative;
+        }
+        p{
+            font-weight: bold;
+            position: absolute;
+            text-align: center;
+        }
+    }
+    div:nth-child(2n){
+        color: #980000;
+    }
+    div:nth-child(2n-1){
+        color: #006900;
+    }
 }
