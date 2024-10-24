@@ -1,0 +1,134 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+@media screen and (max-width: 700px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'main'
+            'aside'
+            'footer';
+    }
+}
+body {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'aside'
+        'footer';
+    gap: 20px;
+    background-color: black;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    gap: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 1%;
+
+    nav {
+        font-size: large;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: white
+        }
+
+        a:hover {
+            color: black
+        }
+
+    }
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+
+    section#principal {
+        height: 40vh;
+        width: 50%;
+        background-color: white;
+        border-radius: 1%;
+        h3{
+            padding-left: 10px;
+        }
+        p{
+            padding-left: 10px; 
+        }
+    }
+
+    section#Introdução {
+        height: 40vh;
+        width: 50%;
+        background-color: white;
+        border-radius: 1%;
+        h3{
+            padding-left: 10px;
+        }
+        p{
+            padding-left: 10px; 
+        }
+    }
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    section#imagen {
+        height:40vh;
+        width: 50%;
+        background-color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        img{
+            padding: 20px;
+        }
+    }
+
+    section#links {
+        height: 40vh;
+        width: 50%;
+        background-color: white;
+        h3{
+            padding-left: 10px;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding-left: 10px;
+            padding-right: 10px;
+            a{
+                background-color: gray;
+                margin:10px;
+                border-radius: 5%;
+                text-decoration: none;
+                color: white;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: gray;
+    text-align: center;
+}
