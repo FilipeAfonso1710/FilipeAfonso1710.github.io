@@ -13,6 +13,32 @@
         flex-direction: column !important;
         flex-wrap: wrap !important;
     }
+    header {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+            font-size: 1.5em !important;
+            padding: 0.3em !important;
+            text-align: center;
+
+        }
+        nav {
+            display: flex !important;
+            justify-content: space-evenly !important;
+            width: 100%;
+            font-weight: bold;
+        }
+        nav a{
+            grid-area: menu;
+            font-size: 0.8em !important;
+            padding: 2% !important;
+            margin-bottom: 2vh !important;
+            margin-right: 0px !important;
+            background-color: #006900 !important;
+        }
+    }
 }
 
 body {
@@ -177,8 +203,8 @@ article#experimento {
             align-items: center;
             justify-content: center;
             margin: 10%;
-            height: 200px;
-            width: 200px;
+            height: 25vh;
+            width: 25vw;
             border-radius: 100px;
             background-color: white;
 
@@ -186,8 +212,8 @@ article#experimento {
 
         div#pequeno {
             margin: 5%;
-            height: 75px;
-            width: 75px;
+            height: 10vh;
+            width: 10vh;
             background-color: #980000;
             border-radius: 100px;
         }
@@ -263,16 +289,18 @@ article#video {
     width: 100%;
     height: auto;
     position: relative;
-    p{
+
+    p {
         position: absolute;
         font-size: 2rem;
         font-weight: bold;
         font-style: oblique;
         z-index: 2;
         color: white;
-}
+    }
 
 }
+
 #myvideo {
     width: 100%;
     height: auto;
@@ -281,28 +309,48 @@ article#video {
     animation-iteration-count: infinite;
 }
 
-article#fotos{
+article#fotos {
     display: flex;
     position: relative;
-
-    div{
+    justify-content: space-evenly;
+    background-color: #ea9898;
+    div {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        img{
+        position: relative;
+
+        img {
             width: 100%;
             position: relative;
+            animation-name: anima;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
         }
-        p{
+
+        p {
             font-weight: bold;
             position: absolute;
             text-align: center;
         }
     }
-    div:nth-child(2n){
+
+    div:nth-child(2n) {
         color: #980000;
     }
-    div:nth-child(2n-1){
+
+    div:nth-child(2n-1) {
         color: #006900;
     }
+}
+
+@keyframes anima {
+
+    10%{
+        transform: rotateX(-360deg);
+    }
+    20%{
+        transform: rotateX(0deg);
+    }
+
 }
