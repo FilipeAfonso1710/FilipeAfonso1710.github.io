@@ -9,8 +9,8 @@ function primeira(){
     }
 
 }
-document.querySelector('primeiro').onmouseover=primeira;
-document.querySelector('primeiro').onmouseout=primeira;
+a.onmouseover=primeira;
+a.onmouseout=primeira;
 
 /*2.interatividade*/
 
@@ -32,11 +32,10 @@ c[2].addEventListener('click', corFrase);
 
 /*3.interatividade*/
 
-const d = document.querySelector('input')
-const e = d.size
+const d = document.querySelector('input#arcoIris')
+let count = 0 
 
-function corInput(){
-    const count = 0    
+function corInput(){   
     if(count === 0){
     d.style.backgroundColor = "red";
     count++
@@ -51,4 +50,27 @@ function corInput(){
     count = 0
     }
 }
-d.addEventListener('keypress', corInput);
+d.addEventListener('keydown', corInput);
+
+/*4.interatividade*/
+
+const e = document.querySelector('input#submeteCor')
+const f = document.querySelector('button#submeter')
+const g = document.querySelector('body')
+
+function corBackground(){
+    g.style.backgroundColor = e.value
+}
+f.addEventListener('click', corBackground);
+
+/*Recorri ao chatgpt para encontrar o valor da constante e. E não utilizei um botão submit pq ao utilizar a minha página fazia refresh*/
+
+/*5.interatividade*/
+
+const h = document.querySelector('a#numero')
+const i = document.querySelector('button#count')
+
+function contar(){
+    h.innerHTML++
+}
+i.addEventListener('click', contar);
