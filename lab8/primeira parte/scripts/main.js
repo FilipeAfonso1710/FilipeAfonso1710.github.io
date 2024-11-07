@@ -82,3 +82,13 @@ document.querySelector('form').onsubmit = (e) => {
     e.preventDefault()
     p.textContent = 'Olá, o ' + q.value + ' tem ' + r.value + '!';
 };
+
+/*7.interatividade*/
+
+let contador = 0;
+const counter = document.querySelector('#counter');
+
+function soma() {
+    counter.innerHTML++
+}
+setInterval(soma, 1000);
