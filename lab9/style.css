@@ -1,68 +1,158 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-body{
+
+body {
     margin: 0px;
     background-color: whitesmoke;
 }
-header{
-    position:sticky;
+
+header {
+    position: sticky;
     display: grid;
-    grid-template-areas: 
-    'h1 h1' 
-    'pr cesto';
+    grid-template-areas:
+        'h1 h1'
+        'pr cesto';
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     margin: 0px;
     text-align: center;
     background-color: #980000;
     color: whitesmoke;
 
-    h1{
+    h1 {
         grid-area: h1;
         margin: 3%;
     }
-    a{
+
+    a {
         display: flex;
         justify-content: center;
         margin-bottom: 5px;
         font-size: large;
     }
-    a#produtos{
+
+    a#produtos {
         grid-area: pr;
-        
+
     }
-    a#cesto{
+
+    a#cesto {
         grid-area: cesto;
-        
+
     }
 }
-main{
+
+main {
+
     background-color: whitesmoke;
-    h2{
+
+    h2 {
+        grid-area: subTitulo;
         font-size: medium;
         text-align: center;
     }
+
+    section:nth-child() {
+        grid-area: produto;
+    }
+
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding-top: 10px;
+        background-color: white;
+    }
+
+    /*Titulo*/
+    section :first-child {
+        grid-area: titulo;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /*Descrição*/
+    section :nth-child(3) {
+        grid-area: descricao;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 2%;
+        padding: 5px;
+        font-style: italic;
+        background-color: lightgrey;
+    }
+
+    img {
+        grid-area: imagem;
+        width: 20vw;
+    }
+
+    button {
+        grid-area: botao;
+        margin-bottom: 10px;
+    }
 }
-footer{
+
+aside {
+    background-color: dodgerblue;
+}
+
+footer {
     margin-bottom: 0px;
     text-align: center;
 }
-@media screen and (min-width: 700px){
-    header{
+
+@media screen and (min-width: 700px) {
+    header {
         display: grid;
         grid-template-areas: "h1 pr cesto";
         grid-template-columns: 5fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
-    h1{
+
+    section {
+        display: grid !important;
+        grid-template-areas:
+            'titulo titulo titulo'
+            'imagem imagem imagem'
+            'descricao descricao descricao'
+            '. botao .';
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr,1fr,1fr,1fr;
+        }
+
+    h1 {
         display: flex;
         justify-content: flex-start;
         padding-left: 10px;
-    }
-    a{
+    }/*
+    button{
+       height: 25px;
+       width: 130px;
+    }*/
+
+    a {
         display: flex;
         align-items: center;
     }
-}
 
+    img {
+        width: 10vw !important;
+        margin-left: 35%;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            'subTitulo subTitulo subTitulo'
+            'produto  produto  produto';
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 40px 100vh;
+
+    }
+
+}
