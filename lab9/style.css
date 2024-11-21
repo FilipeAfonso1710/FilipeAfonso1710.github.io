@@ -46,64 +46,93 @@ header {
 main {
 
     background-color: whitesmoke;
-
-    h2 {
-        grid-area: subTitulo;
-        font-size: medium;
-        text-align: center;
-    }
-
-    article:nth-child() {
-        grid-area: produto;
-    }
-
-
-    article {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-        padding-top: 10px;
-        background-color: white;
-    }
-
-    /*Titulo*/
-    article :first-child {
-        grid-area: titulo;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    /*Descrição*/
-    article :nth-child(3) {
-        grid-area: descricao;
-        margin-left: 10px;
-        margin-right: 10px;
-        border-radius: 2%;
-        padding: 5px;
-        font-style: italic;
-        background-color: lightgrey;
-    }
-
-    img {
-        grid-area: imagem;
-        width: 20vw;
-    }
-
-    button {
-        grid-area: botao;
-        margin-bottom: 10px;
-    }
 }
 
+h2 {
+    grid-area: subTitulo;
+    font-size: medium;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+article:nth-child() {
+    grid-area: produto;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding-top: 10px;
+    background-color: white;
+
+}
+
+/*Titulo*/
+article :first-child {
+    grid-area: titulo;
+    text-align: center;
+    font-weight: bold;
+}
+
+article :nth-child(3) {
+    grid-area: preco;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/*Descrição*/
+article :nth-child(4) {
+    grid-area: descricao;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 2%;
+    padding: 5px;
+    font-style: italic;
+    background-color: lightgrey;
+}
+
+img {
+    grid-area: imagem;
+    width: 20vw;
+}
+
+button {
+    grid-area: botao;
+    margin-bottom: 10px;
+}
+
+/*Cesto*/
 aside {
-    background-color: dodgerblue;
+    padding: 10px;
+    background-color: darkgray;
+    row-gap: 20px;
+
+    article :nth-child(3) {
+        background-color: white;
+        font-size: large;
+        font-style: normal;
+        font-weight: bold;
+    }
+}
+p#preco{
+    grid-area: preco;
+    text-align: center;
 }
 
 footer {
     margin-bottom: 0px;
     text-align: center;
 }
+
 
 @media screen and (min-width: 700px) {
     header {
@@ -118,21 +147,18 @@ footer {
         grid-template-areas:
             'titulo titulo titulo'
             'imagem imagem imagem'
+            'preco preco preco'
             'descricao descricao descricao'
             '. botao .';
-            grid-template-columns: 1fr 140px 1fr;
-            grid-template-rows: 1fr,1fr,1fr,1fr;
-        }
+        grid-template-columns: 1fr 140px 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    }
 
     h1 {
         display: flex;
         justify-content: flex-start;
         padding-left: 10px;
-    }/*
-    button{
-       height: 25px;
-       width: 130px;
-    }*/
+    }
 
     a {
         display: flex;
@@ -155,4 +181,11 @@ footer {
 
     }
 
+    section {
+        display: grid;
+        grid-template-areas:
+            'produto  produto  produto';
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
