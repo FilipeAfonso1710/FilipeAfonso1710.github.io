@@ -53,12 +53,12 @@ main {
         text-align: center;
     }
 
-    section:nth-child() {
+    article:nth-child() {
         grid-area: produto;
     }
 
 
-    section {
+    article {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,14 +68,14 @@ main {
     }
 
     /*Titulo*/
-    section :first-child {
+    article :first-child {
         grid-area: titulo;
         text-align: center;
         font-weight: bold;
     }
 
     /*Descrição*/
-    section :nth-child(3) {
+    article :nth-child(3) {
         grid-area: descricao;
         margin-left: 10px;
         margin-right: 10px;
@@ -113,14 +113,14 @@ footer {
         grid-template-rows: 1fr;
     }
 
-    section {
+    article {
         display: grid !important;
         grid-template-areas:
             'titulo titulo titulo'
             'imagem imagem imagem'
             'descricao descricao descricao'
             '. botao .';
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 140px 1fr;
             grid-template-rows: 1fr,1fr,1fr,1fr;
         }
 
