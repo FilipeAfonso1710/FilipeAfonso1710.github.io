@@ -1,53 +1,13 @@
 const main = document.querySelector('main');
 const aside = document.querySelector('section#cesto');
 const filtroUm = document.querySelector('select#cat');
-let opcaoCategorias 
+const listaProdutos = document.createElement('article');
 let precoTotal = document.querySelector('p#preco');
+let opcaoCategorias
 let teste = 0;
 let produtosAPI = [];
 let categorias = [];
 let desconto = [];
-
-//desconto
-fetch('https://deisishop.pythonanywhere.com/buy')
-    .then(Response => Response.json())
-    .then(data => {
-        desconto = data;
-        console.log(desconto);
-})
-.catch (error => console.error('Erro:', error));
-
-//categorias
-fetch('https://deisishop.pythonanywhere.com/categories')
-    .then(Response => Response.json())
-    .then(data => {
-        categorias = data;
-
-        categorias.forEach((categoria) => {
-            const opcoes = document.createElement('option');
-            opcoes.textContent = categoria;
-            opcoes.value = categoria
-            filtroUm.append(opcoes);
-        });
-    })
-.catch (error => console.error('Erro:', error));
-
-//produtos
-fetch('https://deisishop.pythonanywhere.com/products')
-    .then(Response => Response.json())
-    .then(data => {
-        produtosAPI = data;
-        console.log(produtosAPI);
-    })
-.catch (error => console.error('Erro:', error));
-//Section filtro de tipos de produtos
-
-filtroUm.addEventListener('change', () => {
-    const categoriaSelecionada = filtroUm.value;
-    const produtosFiltrados = produtosAPI.filter(produto => produto.category === categoriaSelecionada);
-    renderizarProdutos(produtosFiltrados);
-});
-
 
 /* Verifica se já existe */
 if (!localStorage.getItem('cesto')) {
@@ -56,10 +16,13 @@ if (!localStorage.getItem('cesto')) {
 
 let cesto = JSON.parse(localStorage.getItem('cesto'));
 
+
 // Função para renderizar o cesto
 function renderizarCesto() {
+
     // Limpa o conteúdo atual do cesto
     aside.innerHTML = "";
+
     //Limpar o teste
     teste = 0;
     if (teste === 0) {
@@ -70,6 +33,7 @@ function renderizarCesto() {
 
     //Pedi ao chatGPT ajuda para atualizar o DOM em tempo real 
     //já que só acontecia quando dava refresh a página
+
 
     // Renderiza cada produto no cesto
     cesto.forEach((produto, index) => {
@@ -113,13 +77,13 @@ function renderizarCesto() {
     });
 }
 
+
 //Usei o chatGPT para me ajudar atualizar os produtos na api para o main
-function renderizarProdutos(produtos = produtosAPI) {
+function renderizarProdutos(produtos) {
 
 
     //produtos passam a outras variavéis para ser mais fácil mudar valores
-    produtosAPI.forEach(produto => {
-        const listaProdutos = document.createElement('article');
+    produtos.forEach(produto => {
         const titulo = document.createElement("p");
         const preco = document.createElement("p");
         const imagem = document.createElement("img");
@@ -135,13 +99,18 @@ function renderizarProdutos(produtos = produtosAPI) {
         listaProdutos.append(titulo, imagem, preco, descricao, botao);
         main.append(listaProdutos);
 
+
         // Evento de clique para adicionar ao cesto
         botao.addEventListener('click', () => {
+
+
             // Adiciona o produto ao cesto
             cesto.push(produto);
 
+
             // Atualiza o localStorage
             localStorage.setItem('cesto', JSON.stringify(cesto));
+
 
             // Atualiza a interface
             renderizarCesto();
@@ -149,7 +118,68 @@ function renderizarProdutos(produtos = produtosAPI) {
     });
 }
 
+
 // Renderizar o cesto ao carregar a página
 document.addEventListener('DOMContentLoaded', function () {
     renderizarCesto();
 });
+
+
+//Section filtro de tipos de produtos
+filtroUm.addEventListener('change', () => {
+    const categoriaSelecionada = filtroUm.value;
+    const produtosFiltrados = produtosAPI.filter(produto => produto.category === categoriaSelecionada);
+    listaProdutos.innerHTML = ""
+    renderizarProdutos(produtosFiltrados);
+});
+
+
+//desconto
+fetch('https://deisishop.pythonanywhere.com/buy')
+    .then(Response => Response.json())
+    .then(data => {
+        desconto = data;
+        console.log(desconto);
+    })
+    .catch(error => console.error('Erro:', error));
+
+
+//categorias
+fetch('https://deisishop.pythonanywhere.com/categories')
+    .then(Response => Response.json())
+    .then(data => {
+        categorias = data;
+
+        categorias.forEach((categoria) => {
+            const opcoes = document.createElement('option');
+            opcoes.textContent = categoria;
+            opcoes.value = categoria
+            filtroUm.append(opcoes);
+        });
+    })
+
+    .catch(error => console.error('Erro:', error));
+
+
+//produtos
+fetch('https://deisishop.pythonanywhere.com/products')
+    .then(Response => Response.json())
+    .then(data => {
+        produtosAPI = data;
+        console.log(produtosAPI);
+    })
+    .catch(error => console.error('Erro:', error));
+
+function ordernarArtigos(produtos) {
+    const ordem = document.querySelector('select#precos');
+    const artigosJaOrdenados = [produtos].sort((a, b) => {
+        if (ordem.value === 'Ordem crescente') {
+            return a.preco - b.preco;
+        }
+        else if (ordem.value === 'Ordem decresente') {
+            return b.preco - a.preco
+        }
+        return 0;
+    });
+    return artigosJaOrdenados;
+}
