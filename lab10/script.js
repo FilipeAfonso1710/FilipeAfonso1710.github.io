@@ -2,12 +2,15 @@ const main = document.querySelector('main');
 const aside = document.querySelector('section#cesto');
 const filtroUm = document.querySelector('select#cat');
 const listaProdutos = document.createElement('article');
+const ordem = document.querySelector('select#precos');
+const pesquisa = document.querySelector('input[type="text"]');
 let precoTotal = document.querySelector('p#preco');
 let opcaoCategorias
 let teste = 0;
 let produtosAPI = [];
 let categorias = [];
 let desconto = [];
+let produtosCarregadosNaPagina = [];
 
 /* Verifica se já existe */
 if (!localStorage.getItem('cesto')) {
@@ -80,7 +83,7 @@ function renderizarCesto() {
 
 //Usei o chatGPT para me ajudar atualizar os produtos na api para o main
 function renderizarProdutos(produtos) {
-
+produtosCarregadosNaPagina = [];
 
     //produtos passam a outras variavéis para ser mais fácil mudar valores
     produtos.forEach(produto => {
@@ -89,7 +92,9 @@ function renderizarProdutos(produtos) {
         const imagem = document.createElement("img");
         const descricao = document.createElement("p");
         const botao = document.createElement("button");
-
+        
+        
+        produtosCarregadosNaPagina.push(produto);
         titulo.textContent = produto.title;
         preco.textContent = "Custo : " + produto.price + "€";
         imagem.src = produto.image;
@@ -118,7 +123,6 @@ function renderizarProdutos(produtos) {
     });
 }
 
-
 // Renderizar o cesto ao carregar a página
 document.addEventListener('DOMContentLoaded', function () {
     renderizarCesto();
@@ -127,10 +131,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Section filtro de tipos de produtos
 filtroUm.addEventListener('change', () => {
-    const categoriaSelecionada = filtroUm.value;
-    const produtosFiltrados = produtosAPI.filter(produto => produto.category === categoriaSelecionada);
-    listaProdutos.innerHTML = ""
-    renderizarProdutos(produtosFiltrados);
+    if (filtroUm.value === 'Todos') {
+        listaProdutos.innerHTML = "";
+        renderizarProdutos(produtosAPI);
+    } else {
+        const produtosFiltrados = produtosAPI.filter(produto => produto.category === filtroUm.value);
+        listaProdutos.innerHTML = ""
+        renderizarProdutos(produtosFiltrados);
+    }
 });
 
 
@@ -167,19 +175,31 @@ fetch('https://deisishop.pythonanywhere.com/products')
     .then(data => {
         produtosAPI = data;
         console.log(produtosAPI);
+        renderizarProdutos(produtosAPI);
     })
     .catch(error => console.error('Erro:', error));
 
-function ordernarArtigos(produtos) {
-    const ordem = document.querySelector('select#precos');
-    const artigosJaOrdenados = [produtos].sort((a, b) => {
+
+ //Fun para colocar em ordem crescente ou decrescente
+ordem.addEventListener('change', () => {
+    const artigosJaOrdenados = [...produtosCarregadosNaPagina].sort((a, b) => {
         if (ordem.value === 'Ordem crescente') {
-            return a.preco - b.preco;
+            return a.price - b.price;
         }
         else if (ordem.value === 'Ordem decresente') {
-            return b.preco - a.preco
+            return b.price - a.price
         }
         return 0;
     });
-    return artigosJaOrdenados;
-}
+    listaProdutos.innerHTML = "";
+    return renderizarProdutos(artigosJaOrdenados);
+});
+
+pesquisa.addEventListener('keydown',() =>  {
+const inputPesquisa = pesquisa.value.toLowerCase();
+const produtosPesquisados = produtosAPI.filter(produto =>
+    produto.title.toLowerCase().includes(inputPesquisa)
+);
+    listaProdutos.innerHTML = "";
+    renderizarProdutos(produtosPesquisados);
+});

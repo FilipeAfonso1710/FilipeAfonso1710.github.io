@@ -16,20 +16,28 @@
     <main>
         <h2>Selecione os seus produtos</h2>
         <section id="filtros">
-            <select id="cat"></select>
+            <p>Filtrar</p>
+            <select id="cat">
+                <option>Todos</option>
+            </select>
         </section>
         <section id="ordenarPrecos">
+            <p>Ordenar</p>
             <select id="precos">
                 <option disabled selected>Ordenar por preços</option>
                 <option>Ordem decresente</option>
                 <option>Ordem crescente</option>
             </select>
         </section>
+        <section>
+            <p>Procurar</p>
+            <input type="text">
+        </section>
     </main>
     <aside>
         <h3>Produtos Selecionados:</h>
             <section id="cesto"></section>
-        <p id="preco"></p>
+            <p id="preco"></p>
     </aside>
     <footer>
         <p>2024</p>
