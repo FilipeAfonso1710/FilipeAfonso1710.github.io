@@ -3,6 +3,7 @@ const aside = document.querySelector('section#cesto');
 const filtroUm = document.querySelector('select#cat');
 const listaProdutos = document.createElement('article');
 const ordem = document.querySelector('select#precos');
+const selectProdutos = document.querySelector('section#produtos');
 const pesquisa = document.querySelector('input[type="text"]');
 let precoTotal = document.querySelector('p#preco');
 let opcaoCategorias
@@ -84,9 +85,10 @@ function renderizarCesto() {
 //Usei o chatGPT para me ajudar atualizar os produtos na api para o main
 function renderizarProdutos(produtos) {
 produtosCarregadosNaPagina = [];
-
+selectProdutos.innerHTML="";
     //produtos passam a outras variavéis para ser mais fácil mudar valores
     produtos.forEach(produto => {
+        const cadaPorduto = document.createElement('article');
         const titulo = document.createElement("p");
         const preco = document.createElement("p");
         const imagem = document.createElement("img");
@@ -100,9 +102,10 @@ produtosCarregadosNaPagina = [];
         imagem.src = produto.image;
         descricao.textContent = produto.description;
         botao.textContent = "+ Adicionar ao cesto";
-
+        
         listaProdutos.append(titulo, imagem, preco, descricao, botao);
-        main.append(listaProdutos);
+        cadaPorduto.append(titulo, imagem, preco, descricao, botao);
+        selectProdutos.append(cadaPorduto);
 
 
         // Evento de clique para adicionar ao cesto
