@@ -32,8 +32,9 @@ function renderizarCesto() {
     if (teste === 0) {
         precoTotal.textContent = "";
     } else {
-        precoTotal.textContent = "Custo total: " + teste;
+        precoTotal.textContent = "Custo total: " + teste; 
     }
+
 
     //Pedi ao chatGPT ajuda para atualizar o DOM em tempo real 
     //já que só acontecia quando dava refresh a página
@@ -41,6 +42,7 @@ function renderizarCesto() {
 
     // Renderiza cada produto no cesto
     cesto.forEach((produto, index) => {
+        const quantidadeProdutos = 0;
         const produtosNoCesto = document.createElement('article');
         const titulo = document.createElement("p");
         const preco = document.createElement("p");
@@ -49,11 +51,28 @@ function renderizarCesto() {
 
         titulo.textContent = produto.title;
         preco.textContent = "Custo :" + produto.price;
-        imagem.src = produto;
+        imagem.src = produto.image;
         botao.textContent = "Remover do cesto";
 
         teste += produto.price;
         produtosNoCesto.append(titulo, imagem, preco, botao);
+        quantidadeProdutos++;
+
+        const checkBox = document.querySelector("input#alunoDeisi");
+
+        data = {
+            student: true,
+            coupon: "black-friday"
+          }
+        
+        fetch('https://deisishop.pythonanywhere.com/buy/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', 
+          },
+          body: JSON.stringify(data)
+        })
+
 
         //calcular preço total no cesto
 
@@ -145,14 +164,7 @@ filtroUm.addEventListener('change', () => {
 });
 
 
-//desconto
-fetch('https://deisishop.pythonanywhere.com/buy')
-    .then(Response => Response.json())
-    .then(data => {
-        desconto = data;
-        console.log(desconto);
-    })
-    .catch(error => console.error('Erro:', error));
+
 
 
 //categorias
