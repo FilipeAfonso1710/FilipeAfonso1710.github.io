@@ -5,6 +5,8 @@ const listaProdutos = document.createElement('article');
 const ordem = document.querySelector('select#precos');
 const selectProdutos = document.querySelector('section#produtos');
 const pesquisa = document.querySelector('input[type="text"]');
+const todosProdutos = document.querySelector('button#addTodosProdutos')
+const info = document.querySelector('button#menosInfo')
 let quantidadeProdutos = 0;
 let precoTotal = document.querySelector('p#preco');
 let opcaoCategorias
@@ -146,17 +148,19 @@ selectProdutos.innerHTML="";
         const imagem = document.createElement("img");
         const descricao = document.createElement("p");
         const botao = document.createElement("button");
+        const rating = document.createElement("p");
         
         
         produtosCarregadosNaPagina.push(produto);
         titulo.textContent = produto.title;
         preco.textContent = "Custo : " + produto.price + "€";
          imagem.src = produto.image;
+         rating.textContent = produto.rating.rate;
         descricao.textContent = produto.description;
         botao.textContent = "+ Adicionar ao cesto";
         
-        listaProdutos.append(titulo, imagem, preco, descricao, botao);
-        cadaPorduto.append(titulo, imagem, preco, descricao, botao);
+        listaProdutos.append(titulo, imagem, preco, rating, descricao, botao);
+        cadaPorduto.append(titulo, imagem, preco, rating, descricao, botao);
         selectProdutos.append(cadaPorduto);
 
 
@@ -229,13 +233,15 @@ fetch('https://deisishop.pythonanywhere.com/products')
 
 
  //Fun para colocar em ordem crescente ou decrescente
+ //Adaptado para a defesa 2 :D
+
 ordem.addEventListener('change', () => {
     const artigosJaOrdenados = [...produtosCarregadosNaPagina].sort((a, b) => {
         if (ordem.value === 'Ordem crescente') {
-            return a.price - b.price;
+            return a.rating.rate - b.rating.rate;
         }
         else if (ordem.value === 'Ordem decresente') {
-            return b.price - a.price
+            return b.rating.rate - a.rating.rate
         }
         return 0;
     });
@@ -243,16 +249,32 @@ ordem.addEventListener('change', () => {
     return renderizarProdutos(artigosJaOrdenados);
 });
 
+//pesquisa de produto
+
 pesquisa.addEventListener('keydown',() =>  {
 const inputPesquisa = pesquisa.value.toLowerCase();
 const produtosPesquisados = produtosAPI.filter(produto =>
     produto.title.toLowerCase().includes(inputPesquisa)
 );
+const produtosPesquisadosDescricao = produtosAPI.filter(produto =>
+    produto.description.toLowerCase().includes(inputPesquisa)
+);
     listaProdutos.innerHTML = "";
     renderizarProdutos(produtosPesquisados);
+    renderizarProdutos(produtosPesquisadosDescricao);
 });
 
 
 if (totalCost && reference) {
     console.log(`Custo total: ${totalCost}, Referência: ${reference}`);
 }
+
+todosProdutos.addEventListener('click',() =>{
+    cesto = produtosAPI;
+    renderizarCesto
+    aside.append()
+});
+
+info.addEventListener('click',() =>{
+    selectProdutos.forEach
+});
