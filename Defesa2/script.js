@@ -276,5 +276,7 @@ todosProdutos.addEventListener('click',() =>{
 });
 
 info.addEventListener('click',() =>{
-    selectProdutos.forEach
+    if
+   const teste = document.querySelector("#produtos > article:nth-child(1) > p:nth-child(5)")
+    teste.innerHTML = ""
 });
